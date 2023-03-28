@@ -35,12 +35,6 @@ model.fit(X_train, y_train)
 # Generate prediction based on user selected attributes
 y_pred = model.predict([[sepal_length, sepal_width, petal_length, petal_width]])
 
-# Display EDA
-st.subheader('Exploratory Data Analysis')
-st.write('The data is grouped by the class and the variable mean is computed for each class.')
-groupby_species_mean = df.groupby('Species').mean()
-st.write(groupby_species_mean)
-st.bar_chart(groupby_species_mean.T)
 
 # Print input features
 st.subheader('Variables in Data Set')
